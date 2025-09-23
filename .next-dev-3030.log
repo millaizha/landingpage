@@ -1,0 +1,44 @@
+
+> liko-next-js@0.1.0 dev
+> next dev -p 3030
+
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:3030
+
+ ✓ Starting...
+ ✓ Ready in 2.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 1212ms (871 modules)
+ GET / 200 in 1482ms
+ ✓ Compiled /favicon.ico in 248ms (474 modules)
+ GET /favicon.ico 200 in 310ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 369ms (871 modules)
+ GET / 200 in 364ms
+ ✓ Compiled /favicon.ico in 42ms (474 modules)
+ GET /favicon.ico 200 in 96ms
+ GET / 200 in 189ms
+ GET /favicon.ico 200 in 26ms
+ GET / 200 in 55ms
+ GET /favicon.ico 200 in 13ms
+ GET / 200 in 33ms
+ GET /favicon.ico 200 in 14ms
+ ✓ Compiled in 245ms (901 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 253ms (901 modules)
+ GET / 200 in 297ms
+ GET /favicon.ico 200 in 13ms
+ ✓ Compiled in 256ms (871 modules)
+ ✓ Compiled in 461ms (871 modules)
+ GET / 200 in 524ms
+ ✓ Compiled in 214ms (871 modules)
+ ✓ Compiled in 140ms (871 modules)
+ GET / 200 in 207ms
+ ✓ Compiled /favicon.ico in 225ms (474 modules)
+ GET /favicon.ico 200 in 286ms
+ ✓ Compiled in 236ms (871 modules)
+ ✓ Compiled in 138ms (871 modules)
+ ✓ Compiled in 126ms (871 modules)
+ GET / 200 in 237ms
+ ✓ Compiled /favicon.ico in 90ms (474 modules)
+ GET /favicon.ico 200 in 154ms
