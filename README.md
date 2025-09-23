@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 1-Day Paid Trial — Programmatic Landing Page (Scalable)
+
+**Repository**: https://github.com/vonascreatives/landingpage.git
+
+## Trial Objective
+
+Implement a minimal, scalable path CMS/DB → Next.js that renders 3 landing pages (3 unique slugs) with images and is architected to scale to 100–200k pages. Deploy to a Vercel preview.
+
+**Timebox**: ≤ 1 working day
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm/yarn/pnpm
+- Vercel account for deployment
 
+### Installation
 ```bash
+git clone https://github.com/vonascreatives/landingpage.git
+cd landingpage
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Trial Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Tech Stack (Pick ONE and ship)
 
-## Learn More
+**CMS Path (Preferred):**
+- Prismic → Next.js
 
-To learn more about Next.js, take a look at the following resources:
+**DB Path:**
+- Sanity (assets only) + Neon/Postgres (text), or
+- MongoDB Atlas, or
+- Upstash Redis / Vercel KV (key/value docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+⚠️ **If you pick a DB/KV path**, keep price in mind and note expected monthly cost at 100–200k pages (idle + typical read volume).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### What's NOT Allowed
+- ❌ Local MDX/Markdown/JSON file content
+- ❌ Design changes (keep current template look)
+- ❌ Working on other pages (focus only on landing page)
+
+### Implementation Requirements
+
+1. **Next.js Setup**
+   - Use App Router (preferred)
+   - Implement `/[slug]` dynamic route
+   - Use ISR/ODR (no giant static prebuild)
+   - Set revalidate or tag-based revalidation
+   - Do not pre-generate more than a handful of slugs at build
+
+2. **Data Architecture**
+   - One clean abstraction (e.g., `getLandingPageBySlug(slug)`)
+   - Swappable backend design
+   - Proper image handling with alt text
+
+3. **Sitemaps (Prove Sharding Approach)**
+   - `/sitemap.xml` (index)
+   - At least one shard route like `/sitemaps/sitemap-1.xml`
+   - Include today's 3 slugs
+   - Show in tech note how you'd shard to cover 100–200k URLs (50k max per sitemap)
+
+4. **Styling**
+   - Keep site/template look
+   - No redesign required
+
+## Deliverables (End of Day)
+
+### 1. Working Application
+- ✅ Vercel preview URL with 3 working slugs
+- ✅ Repo/PR link (clean, readable code)
+
+### 2. Tech Documentation
+Create a **1-page TECH NOTE** (Markdown/PDF) including:
+
+- **Data Model**: Exact field names + types in chosen store
+- **Mapping**: Store → component props (including image + alt handling)
+- **Caching/ISR**: Your revalidate/tags approach
+- **Sitemaps**: Shard strategy (math for 100–200k pages)
+
+## Acceptance Criteria
+
+- [ ] Three distinct slugs render with all required fields and different images (each with alt)
+- [ ] `/sitemap.xml` and one shard route exist
+- [ ] Code shows how you'll shard to 100–200k pages
+- [ ] 404 works for unknown slugs
+- [ ] Code is simple, modular, and production-lean
+
+## Current Template Structure
+
+This is a Next.js landing page template with:
+- ✅ Complete component library
+- ✅ All images and assets included
+- ✅ SCSS styling system
+- ✅ TypeScript configuration
+- ✅ Production-ready structure
+
+### Key Files to Focus On
+- `/src/app/` - App Router structure (create your dynamic routes here)
+- `/public/assets/` - All images and static assets
+- `/src/components/` - Reusable components
+- `/src/data/` - Current static data (replace with your CMS/DB)
+
+## Notes for Developers
+
+1. **Focus Area**: Transform the main landing page into a dynamic, CMS-driven page
+2. **Ignore**: Other template pages (about, portfolio, etc.)
+3. **Keep**: Current design and styling
+4. **Scale**: Architecture must handle 100–200k pages efficiently
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Connect to Vercel
+vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Deploy
+vercel --prod
+```
+
+For detailed deployment instructions, check [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+
+---
+
+**Good luck with the trial!** 🚀
