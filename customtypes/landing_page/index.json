@@ -70,10 +70,6 @@
           "multi": "paragraph, strong, em, hyperlink, list-item, o-list-item"
         }
       },
-      "about_image": {
-        "type": "Image",
-        "config": { "label": "About Image" }
-      },
       "brands": {
         "type": "Group",
         "config": {

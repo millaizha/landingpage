@@ -68,10 +68,10 @@ export default function HomeAirtableMain({ page }: { page?: any }) {
   return (
     <Wrapper>
       <HeaderFive
-        logoUrl={data.logo_url ?? ""}
-        logoWhiteUrl={data.logo_white_url ?? ""}
-        ctaLink={data.hero_header_cta_link?.url ?? "/contact"}
-        ctaText={data.hero_header_cta_text ?? "Get In Touch"}
+        logoUrl={data.logo_url?.url ?? ""}
+        logoWhiteUrl={data.logo_white_url?.url ?? ""}
+        ctaLink={data.header_logo_cta_link?.url ?? "/contact"}
+        ctaText={data.header_logo_cta_text ?? "Get In Touch"}
       />
 
       <div id="smooth-wrapper">
@@ -86,13 +86,19 @@ export default function HomeAirtableMain({ page }: { page?: any }) {
                     )
                   : []
               }
-              subtitle={typeof data.hero_subtitle === "string" ? data.hero_subtitle : ""}
+              subtitle={
+                typeof data.hero_subtitle === "string" ? data.hero_subtitle : ""
+              }
               ctaText={data.hero_cta_text ?? ""}
               ctaLink={data.hero_cta_link?.url ?? "/"}
             />
 
             {/* Gallery */}
-            <GalleryOne images={Array.isArray(data.gallery_images) ? data.gallery_images : []} />
+            <GalleryOne
+              images={
+                Array.isArray(data.gallery_images) ? data.gallery_images : []
+              }
+            />
 
             {/* About */}
             <AboutThree
@@ -101,10 +107,14 @@ export default function HomeAirtableMain({ page }: { page?: any }) {
             />
 
             {/* Brand slider */}
-            <BrandThree brands={Array.isArray(data.brands) ? data.brands : []} />
+            <BrandThree
+              brands={Array.isArray(data.brands) ? data.brands : []}
+            />
 
             {/* Projects */}
-            <ProjectFour projects={Array.isArray(data.projects) ? data.projects : []} />
+            <ProjectFour
+              projects={Array.isArray(data.projects) ? data.projects : []}
+            />
 
             {/* Counters */}
             <CounterOne
@@ -156,7 +166,11 @@ export default function HomeAirtableMain({ page }: { page?: any }) {
             addressText={data.footer_address_text ?? ""}
             addressMapLink={data.footer_address_mapLink ?? ""}
             phone={data.footer_phone ?? ""}
-            socials={Array.isArray(data.footer_social_links) ? data.footer_social_links : []}
+            socials={
+              Array.isArray(data.footer_social_links)
+                ? data.footer_social_links
+                : []
+            }
           />
         </div>
       </div>
