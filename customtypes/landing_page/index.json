@@ -1,0 +1,199 @@
+{
+  "id": "landing_page",
+  "label": "Landing Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": { "label": "UID", "placeholder": "Unique page ID" }
+      },
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title" }
+      },
+      "hero_title": {
+        "type": "Group",
+        "config": {
+          "label": "Hero Title Lines",
+          "fields": {
+            "line": {
+              "type": "Text",
+              "config": { "label": "Line" }
+            }
+          }
+        }
+      },
+      "hero_subtitle": {
+        "type": "Text",
+        "config": { "label": "Hero Subtitle" }
+      },
+      "hero_cta_text": {
+        "type": "Text",
+        "config": { "label": "Hero CTA Text" }
+      },
+      "hero_cta_link": {
+        "type": "Link",
+        "config": { "label": "Hero CTA Link" }
+      },
+      "gallery_images": {
+        "type": "Group",
+        "config": {
+          "label": "Gallery Images",
+          "fields": {
+            "image": { "type": "Image", "config": { "label": "Image" } }
+          }
+        }
+      },
+      "about_heading": {
+        "type": "Text",
+        "config": { "label": "About Heading" }
+      },
+      "about_content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Content",
+          "multi": "paragraph, strong, em, hyperlink, list-item, o-list-item"
+        }
+      },
+      "about_image": {
+        "type": "Image",
+        "config": { "label": "About Image" }
+      },
+      "brands": {
+        "type": "Group",
+        "config": {
+          "label": "Brands",
+          "fields": {
+            "logo": {
+              "type": "Image",
+              "config": { "label": "Logo" }
+            }
+          }
+        }
+      },
+      "projects": {
+        "type": "Group",
+        "config": {
+          "label": "Projects",
+          "fields": {
+            "title": { "type": "Text", "config": { "label": "Title" } },
+            "meta": { "type": "Text", "config": { "label": "Meta" } },
+            "image1": { "type": "Image", "config": { "label": "Image 1" } },
+            "image2": { "type": "Image", "config": { "label": "Image 2" } },
+            "link": { "type": "Link", "config": { "label": "Project Link" } }
+          }
+        }
+      },
+      "counters": {
+        "type": "Group",
+        "config": {
+          "label": "Counters",
+          "fields": {
+            "value": { "type": "Number", "config": { "label": "Value" } },
+            "label": { "type": "Text", "config": { "label": "Label" } }
+          }
+        }
+      },
+      "marquee_images": {
+        "type": "Group",
+        "config": {
+          "label": "Marquee Images",
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": { "label": "Image" }
+            }
+          }
+        }
+      },
+      "video_url": {
+        "type": "Text",
+        "config": { "label": "Video URL" }
+      },
+      "video_subtitle": {
+        "type": "Text",
+        "config": { "label": "Video Subtitle" }
+      },
+      "video_title": {
+        "type": "Text",
+        "config": { "label": "Video Title" }
+      },
+      "video_description": {
+        "type": "Text",
+        "config": { "label": "Video Description" }
+      },
+      "services_section_title": {
+        "type": "Text",
+        "config": { "label": "Services Section Title" }
+      },
+      "services_section_subtitle": {
+        "type": "Text",
+        "config": { "label": "Services Section Subtitle" }
+      },
+      "services": {
+        "type": "Group",
+        "config": {
+          "label": "Services",
+          "fields": {
+            "title": { "type": "Text", "config": { "label": "Title" } },
+            "desc": { "type": "Text", "config": { "label": "Description" } },
+            "link": { "type": "Link", "config": { "label": "Link" } },
+            "category": {
+              "type": "Group",
+              "config": {
+                "label": "Categories",
+                "fields": {
+                  "name": { "type": "Text", "config": { "label": "Name" } }
+                }
+              }
+            }
+          }
+        }
+      },
+      "cta_description": {
+        "type": "Text",
+        "config": { "label": "CTA Description" }
+      },
+      "cta_button_link": {
+        "type": "Link",
+        "config": { "label": "CTA Button Link" }
+      },
+      "footer_subtitle": {
+        "type": "Text",
+        "config": { "label": "Footer Subtitle" }
+      },
+      "footer_title": {
+        "type": "Text",
+        "config": { "label": "Footer Title" }
+      },
+      "footer_email": {
+        "type": "Text",
+        "config": { "label": "Footer Email" }
+      },
+      "footer_address_text": {
+        "type": "Text",
+        "config": { "label": "Footer Address Text" }
+      },
+      "footer_address_mapLink": {
+        "type": "Link",
+        "config": { "label": "Footer Address Map Link" }
+      },
+      "footer_phone": {
+        "type": "Text",
+        "config": { "label": "Footer Phone" }
+      },
+      "footer_social_links": {
+        "type": "Group",
+        "config": {
+          "label": "Footer Social Links",
+          "fields": {
+            "label": { "type": "Text", "config": { "label": "Label" } },
+            "url": { "type": "Link", "config": { "label": "URL" } }
+          }
+        }
+      }
+    }
+  }
+}

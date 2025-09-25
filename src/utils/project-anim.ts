@@ -26,6 +26,7 @@ function projectThreeAnimation() {
             end: "bottom 10%",
             scrub: 1,
             pin: true,
+            pinSpacing: true,
             transformOrigin: "50% 50%" as any,
           } as any,
         });
@@ -38,6 +39,7 @@ function projectThreeAnimation() {
             end: "bottom 10%",
             scrub: 1,
             pin: false,
+            pinSpacing: true,
             transformOrigin: "50% 50%" as any,
           } as any,
         });

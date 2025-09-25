@@ -3,7 +3,19 @@ import React from "react";
 import { ArrowBg, RightArrowTwo } from "../svg";
 import Link from "next/link";
 
-export default function HeroBannerFour() {
+type HeroBannerProps = {
+  titleLines: string[]; // multiple lines for title
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+};
+
+export default function HeroBannerFour({
+  titleLines,
+  subtitle,
+  ctaText,
+  ctaLink,
+}: HeroBannerProps) {
   return (
     <div className="tp-hero-3-area tp-hero-3-ptb fix">
       <div className="container">
@@ -13,20 +25,33 @@ export default function HeroBannerFour() {
               <div className="tp-hero-3-circle-shape">
                 <span></span>
               </div>
+
+              {/* Title with multiple lines */}
               <h4 className="tp-hero-3-title tp_reveal_anim">
-                <span className="tp-reveal-line">Transform Your Workflow</span>
-                <span className="tp-reveal-line">with AI-Powered Airtable Templates</span>
+                {titleLines.map((line, i) => (
+                  <span key={i} className="tp-reveal-line">
+                    {line}
+                  </span>
+                ))}
               </h4>
-              <span className="tp-hero-3-category tp_reveal_anim">
-                Beautiful AI Images for Social Media & Webshops
-              </span>
-              <Link className="tp-btn-black-2" href="/contact">
-                Get Your Template{" "}
-                <span className="p-relative">
-                  <RightArrowTwo />
-                  <ArrowBg />
+
+              {/* Subtitle */}
+              {subtitle && (
+                <span className="tp-hero-3-category tp_reveal_anim">
+                  {subtitle}
                 </span>
-              </Link>
+              )}
+
+              {/* CTA Button */}
+              {ctaText && ctaLink && (
+                <Link className="tp-btn-black-2" href={ctaLink}>
+                  {ctaText}{" "}
+                  <span className="p-relative">
+                    <RightArrowTwo />
+                    <ArrowBg />
+                  </span>
+                </Link>
+              )}
             </div>
           </div>
         </div>
