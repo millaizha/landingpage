@@ -62,7 +62,7 @@ const PortfolioWrapperMain = () => {
             {/* portfolio hero */}
 
             {/* portfolio area */}
-            <ProjectFour style_2={true}/>
+            {/* <ProjectFour style_2={true}/> */}
             {/* portfolio area */}
 
             {/* big text */}

@@ -66,7 +66,7 @@ const HomeFiveMain = () => {
           <main>
 
             {/* header area start */}
-            <HeaderFive />
+            {/* <HeaderFive /> */}
             {/* header area end */}
 
             {/* hero area start */}
@@ -82,7 +82,7 @@ const HomeFiveMain = () => {
             {/* project area end */}
 
             {/* counter area start */}
-            <CounterOne />
+            {/* <CounterOne /> */}
             {/* counter area end */}
 
             {/* mission area start */}
@@ -100,7 +100,7 @@ const HomeFiveMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterFive />
+          {/* <FooterFive /> */}
           {/* footer area */}
         </div>
       </div>

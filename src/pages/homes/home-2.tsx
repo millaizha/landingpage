@@ -74,7 +74,7 @@ const HomeTwoMain = () => {
             {/* about area end */}
 
             {/* video area start */}
-            <VideoTwo />
+            {/* <VideoTwo /> */}
             {/* video area end */}
 
             {/* service area start */}

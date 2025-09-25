@@ -55,24 +55,24 @@ const HomeFourMain = () => {
           <main>
 
             {/* hero area start */}
-            <HeroBannerFour />
+            {/* <HeroBannerFour /> */}
             {/* hero area end */}
 
             {/* gallery area start */}
-            <GalleryOne />
+            {/* <GalleryOne /> */}
             {/* gallery area end */}
 
             {/* about area start */}
-            <AboutThree />
+            {/* <AboutThree /> */}
             {/* about area end */}
 
             {/* brand area start */}
-            <BrandThree />
+            {/* <BrandThree /> */}
             {/* brand area end */}
 
 
             {/* project area start */}
-            <ProjectFour />
+            {/* <ProjectFour /> */}
             {/* project area end */}
 
             {/* video area start */}
@@ -80,11 +80,11 @@ const HomeFourMain = () => {
             {/* video area end */}
 
             {/* service area start */}
-            <ServiceFour />
+            {/* <ServiceFour /> */}
             {/* service area end */}
 
             {/* contact area start */}
-            <ContactOne />
+            {/* <ContactOne /> */}
             {/* contact area end */}
 
           </main>
