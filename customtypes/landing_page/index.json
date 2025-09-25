@@ -9,6 +9,19 @@
         "type": "UID",
         "config": { "label": "UID", "placeholder": "Unique page ID" }
       },
+      "logo_url": { "type": "Image", "config": { "label": "Logo" } },
+      "logo_white_url": {
+        "type": "Image",
+        "config": { "label": "Logo (White)" }
+      },
+      "header_logo_cta_text": {
+        "type": "Text",
+        "config": { "label": "Header Logo CTA Text" }
+      },
+      "header_logo_cta_link": {
+        "type": "Link",
+        "config": { "label": "Header Logo CTA Link" }
+      },
       "title": {
         "type": "Text",
         "config": { "label": "Title" }
